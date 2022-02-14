@@ -36,13 +36,13 @@ const resetCheckboxes = () => {
   checkboxes.forEach((checkbox) => {
     checkbox.disabled = false;
     checkbox.checked = false;
-    current = [];
   });
 };
 
 updateLabels(1);
 reset.onclick = () => {
   resetCheckboxes();
+  current = [];
 };
 
 checkboxes.forEach((checkbox) => {
@@ -67,6 +67,7 @@ checkboxes.forEach((checkbox) => {
 
     if (nbChecked === 6) {
       resetCheckboxes();
+      current = [];
     }
   });
 });
